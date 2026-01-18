@@ -1,44 +1,175 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CriptoGalería</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abstract Art Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a CriptoGalería</h1>
-    <nav>
-      <ul>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+  <!-- Sticky Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Abstract Art Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="galeria">
-      <h2>Galería de Criptomonedas</h2>
-      <div class="galeria">
-        <!-- Aquí puedes agregar imágenes o elementos dinámicos -->
-        <div class="item">
-          <img src="imagen1.jpg" alt="Bitcoin">
-          <p>Bitcoin</p>
-        </div>
-        <div class="item">
-          <img src="imagen2.jpg" alt="Ethereum">
-          <p>Ethereum</p>
-        </div>
-        <!-- Agrega más items aquí -->
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Abstract Art Portfolio</h2>
+      <p>Exploring the boundaries of creativity through abstract forms, AI-assisted designs, and experimental art.</p>
+      <div class="cta-buttons">
+        <a href="#gallery" class="btn primary">View Gallery</a>
+        <a href="#contact" class="btn secondary">Contact</a>
       </div>
-    </section>
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Repositorio clonado correctamente. ¡Explora la galería!</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2026 CriptoGalería</p>
-  </footer>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Artwork Cards -->
+        <div class="art-card" data-title="Ethereal Waves" data-year="2025" data-caption="A fluid exploration of motion and color.">
+          <img src="assets/art-01.jpg" alt="Abstract artwork: Ethereal Waves" loading="lazy">
+          <div class="card-info">
+            <h3>Ethereal Waves</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Geometric Dreams" data-year="2025" data-caption="Intersecting shapes in a dreamlike state.">
+          <img src="assets/art-02.jpg" alt="Abstract artwork: Geometric Dreams" loading="lazy">
+          <div class="card-info">
+            <h3>Geometric Dreams</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Cosmic Void" data-year="2024" data-caption="Delving into the unknown depths of space.">
+          <img src="assets/art-03.jpg" alt="Abstract artwork: Cosmic Void" loading="lazy">
+          <div class="card-info">
+            <h3>Cosmic Void</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Neural Networks" data-year="2024" data-caption="AI-inspired patterns mimicking thought processes.">
+          <img src="assets/art-04.jpg" alt="Abstract artwork: Neural Networks" loading="lazy">
+          <div class="card-info">
+            <h3>Neural Networks</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Fluid Forms" data-year="2025" data-caption="Organic shapes flowing in harmony.">
+          <img src="assets/art-05.jpg" alt="Abstract artwork: Fluid Forms" loading="lazy">
+          <div class="card-info">
+            <h3>Fluid Forms</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Digital Echoes" data-year="2024" data-caption="Reflections of the digital age.">
+          <img src="assets/art-06.jpg" alt="Abstract artwork: Digital Echoes" loading="lazy">
+          <div class="card-info">
+            <h3>Digital Echoes</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Abstract Horizons" data-year="2025" data-caption="Endless possibilities on the horizon.">
+          <img src="assets/art-07.jpg" alt="Abstract artwork: Abstract Horizons" loading="lazy">
+          <div class="card-info">
+            <h3>Abstract Horizons</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Chaos Theory" data-year="2024" data-caption="Order emerging from chaos.">
+          <img src="assets/art-08.jpg" alt="Abstract artwork: Chaos Theory" loading="lazy">
+          <div class="card-info">
+            <h3>Chaos Theory</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Pixelated Dreams" data-year="2025" data-caption="Blending pixels and imagination.">
+          <img src="assets/art-09.jpg" alt="Abstract artwork: Pixelated Dreams" loading="lazy">
+          <div class="card-info">
+            <h3>Pixelated Dreams</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Surreal Landscapes" data-year="2024" data-caption="Landscapes of the mind.">
+          <img src="assets/art-10.jpg" alt="Abstract artwork: Surreal Landscapes" loading="lazy">
+          <div class="card-info">
+            <h3>Surreal Landscapes</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Infinite Loops" data-year="2025" data-caption="Cycles of creation and renewal.">
+          <img src="assets/art-11.jpg" alt="Abstract artwork: Infinite Loops" loading="lazy">
+          <div class="card-info">
+            <h3>Infinite Loops</h3>
+            <p>2025</p>
+          </div>
+        </div>
+        <div class="art-card" data-title="Quantum Visions" data-year="2024" data-caption="Peering into quantum realities.">
+          <img src="assets/art-12.jpg" alt="Abstract artwork: Quantum Visions" loading="lazy">
+          <div class="card-info">
+            <h3>Quantum Visions</h3>
+            <p>2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>As an abstract artist, I blend traditional techniques with AI-assisted tools to create pieces that challenge perceptions and evoke emotion. My work explores themes of chaos, order, and the intersection of human creativity with machine intelligence. Each piece is a journey into the unknown, inviting viewers to interpret and connect on a personal level.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>Get in touch to discuss collaborations or inquiries.</p>
+          <p><a href="mailto:artist@example.com">artist@example.com</a></p>
+          <p>Follow me: <a href="#" aria-label="Instagram">Instagram</a> | <a href="#" aria-label="Twitter">Twitter</a></p>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Lightbox -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close modal">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-year"></p>
+        <p id="modal-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
