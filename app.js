@@ -71,17 +71,29 @@ contactForm.addEventListener('submit', (e) => {
   contactForm.reset();
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling for valid in-page anchor links
+document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    const href = this.getAttribute('href');
+    if (!href || href === '#') {
+      return;
     }
+
+    const targetId = href.slice(1);
+    if (!targetId) {
+      return;
+    }
+
+    const target = document.getElementById(targetId);
+    if (!target) {
+      return;
+    }
+
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
 });
 
