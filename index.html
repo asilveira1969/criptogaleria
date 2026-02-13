@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abstract Art Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
-  <!-- Sticky Navigation -->
   <nav id="navbar">
     <div class="nav-container">
       <h1 class="logo">Abstract Art Portfolio</h1>
@@ -20,7 +21,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content">
       <h2>Abstract Art Portfolio</h2>
@@ -32,101 +32,13 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
   <section id="gallery">
     <div class="container">
       <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <!-- Artwork Cards -->
-        <div class="art-card" data-title="Ethereal Waves" data-year="2025" data-caption="A fluid exploration of motion and color.">
-          <img src="assets/art-01.jpg" alt="Abstract artwork: Ethereal Waves" loading="lazy">
-          <div class="card-info">
-            <h3>Ethereal Waves</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Geometric Dreams" data-year="2025" data-caption="Intersecting shapes in a dreamlike state.">
-          <img src="assets/art-02.jpg" alt="Abstract artwork: Geometric Dreams" loading="lazy">
-          <div class="card-info">
-            <h3>Geometric Dreams</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Cosmic Void" data-year="2024" data-caption="Delving into the unknown depths of space.">
-          <img src="assets/art-03.jpg" alt="Abstract artwork: Cosmic Void" loading="lazy">
-          <div class="card-info">
-            <h3>Cosmic Void</h3>
-            <p>2024</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Neural Networks" data-year="2024" data-caption="AI-inspired patterns mimicking thought processes.">
-          <img src="assets/art-04.jpg" alt="Abstract artwork: Neural Networks" loading="lazy">
-          <div class="card-info">
-            <h3>Neural Networks</h3>
-            <p>2024</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Fluid Forms" data-year="2025" data-caption="Organic shapes flowing in harmony.">
-          <img src="assets/art-05.jpg" alt="Abstract artwork: Fluid Forms" loading="lazy">
-          <div class="card-info">
-            <h3>Fluid Forms</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Digital Echoes" data-year="2024" data-caption="Reflections of the digital age.">
-          <img src="assets/art-06.jpg" alt="Abstract artwork: Digital Echoes" loading="lazy">
-          <div class="card-info">
-            <h3>Digital Echoes</h3>
-            <p>2024</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Abstract Horizons" data-year="2025" data-caption="Endless possibilities on the horizon.">
-          <img src="assets/art-07.png" alt="Abstract artwork: Abstract Horizons" loading="lazy">
-          <div class="card-info">
-            <h3>Abstract Horizons</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Chaos Theory" data-year="2024" data-caption="Order emerging from chaos.">
-          <img src="assets/art-08.png" alt="Abstract artwork: Chaos Theory" loading="lazy">
-          <div class="card-info">
-            <h3>Chaos Theory</h3>
-            <p>2024</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Pixelated Dreams" data-year="2025" data-caption="Blending pixels and imagination.">
-          <img src="assets/art-09.png" alt="Abstract artwork: Pixelated Dreams" loading="lazy">
-          <div class="card-info">
-            <h3>Pixelated Dreams</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Surreal Landscapes" data-year="2024" data-caption="Landscapes of the mind.">
-          <img src="assets/art-10.png" alt="Abstract artwork: Surreal Landscapes" loading="lazy">
-          <div class="card-info">
-            <h3>Surreal Landscapes</h3>
-            <p>2024</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Infinite Loops" data-year="2025" data-caption="Cycles of creation and renewal.">
-          <img src="assets/art-11.png" alt="Abstract artwork: Infinite Loops" loading="lazy">
-          <div class="card-info">
-            <h3>Infinite Loops</h3>
-            <p>2025</p>
-          </div>
-        </div>
-        <div class="art-card" data-title="Quantum Visions" data-year="2024" data-caption="Peering into quantum realities.">
-          <img src="assets/art-12.png" alt="Abstract artwork: Quantum Visions" loading="lazy">
-          <div class="card-info">
-            <h3>Quantum Visions</h3>
-            <p>2024</p>
-          </div>
-        </div>
-      </div>
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <h2>About</h2>
@@ -134,7 +46,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
@@ -157,10 +68,9 @@
     </div>
   </section>
 
-  <!-- Modal for Lightbox -->
-  <div id="modal" class="modal" aria-hidden="true">
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-caption" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" aria-label="Close modal">&times;</span>
+      <button id="modal-close" type="button" class="close" aria-label="Close modal">&times;</button>
       <img id="modal-img" src="" alt="">
       <div class="modal-info">
         <h3 id="modal-title"></h3>
@@ -170,6 +80,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
